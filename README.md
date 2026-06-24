@@ -137,6 +137,7 @@ fastapi-auth/
 ├── .env                       # Biến môi trường 
 ├── .env.example               # Mẫu file .env
 ├── .gitignore
+├── app.log                    # File ghi lại log hệ thống (tự động tạo khi chạy)
 ├── main.py                    # Khởi tạo FastAPI app, đăng ký router
 ├── README.md
 └── requirements.txt
