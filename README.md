@@ -284,7 +284,7 @@ Cột STATUS của container redis-auth phải hiển thị Up.
 Kích hoạt môi trường ảo (nếu chưa kích hoạt), sau đó chạy:
 
 ```bash
-uvicorn main:app --reload 
+uvicorn main:app --reload --reload-exclude "app.log"
 ```
 
 Server chạy tại: http://127.0.0.1:8000

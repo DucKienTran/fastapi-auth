@@ -43,3 +43,5 @@ def setup_logging():
 
     # Giảm bớt các log rác, log quét từ uvicorn
     logging.getLogger("uvicorn.access").setLevel(logging.WARNING)
+    logging.getLogger("watchfiles.main").setLevel(logging.WARNING)
+    logging.getLogger("watchfiles").setLevel(logging.WARNING)
