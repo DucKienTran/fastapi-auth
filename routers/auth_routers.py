@@ -34,7 +34,7 @@ def disallow_authenticated(credentials: HTTPAuthorizationCredentials = Depends(s
 
         payload = decode_token(token, expected_audience="access", raise_on_error=False)
         if payload:
-            logger.warning(f"Truy cập bị chặn: người dùng [{payload.get("id")}, {payload.get("sub")}, {payload.get("role")}] cố tình truy cập API ẩn danh")
+            logger.warning(f"Truy cập bị chặn: người dùng [{payload.get('id')}, {payload.get('sub')}, {payload.get('role')}] cố tình truy cập API ẩn danh")
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="Bạn đã đăng nhập hệ thống. Vui lòng đăng xuất trước khi thực hiện hành động này."
